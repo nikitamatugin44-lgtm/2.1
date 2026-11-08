@@ -1,5 +1,26 @@
 #include <Geode/Geode.hpp>
+#include <#include <Geode/Geode.hpp>
 #include <Geode/modify/PlayLayer.hpp>
+
+using namespace geode::prelude;
+
+class $modify(XPosBiasLayer, PlayLayer) {
+    bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) {
+        if (!PlayLayer::init(level, useReplay, dontCreateObjects)) return false;
+
+        auto mod = Mod::get();
+        if (mod->getSettingValue<bool>("enable-bias")) {
+            double bias = mod->getSettingValue<double>("x-bias");
+            if (m_player1) {
+                m_player1->setPositionX(m_player1->getPositionX() + static_cast<float>(bias));
+            }
+            if (m_player2) {
+                m_player2->setPositionX(m_player2->getPositionX() + static_cast<float>(bias));
+            }
+        }
+        return true;
+    }
+};/modify/PlayLayer.hpp>
 
 using namespace geode::prelude;
 
