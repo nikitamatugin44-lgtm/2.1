@@ -1,0 +1,28 @@
+{
+    "geode": "4.4.0",
+    "version": "v1.0.0",
+    "id": "fullydraco.xposbias",
+    "name": "X Pos Bias (2.1 revival)",
+    "developer": "fullydraco",
+    "description": "Adds a virtual x offset at level start so the X pos limit / Scroll Speed Bug shows up earlier, to roughly emulate 2.1-style high-TPS behavior.",
+    "gd": {
+        "android": "2.2074",
+        "win": "2.2074"
+    },
+    "settings": {
+        "enable-bias": {
+            "type": "bool",
+            "name": "Enable X position bias",
+            "description": "Adds a fixed offset to x at level start so the X pos limit / SSB shows up earlier.",
+            "default": true
+        },
+        "x-bias": {
+            "type": "float",
+            "name": "X bias",
+            "description": "Extra virtual distance added at start. Bigger = bug appears sooner. Calibrate by testing, not by formula.",
+            "default": 100000.0,
+            "min": 0.0,
+            "max": 100000000.0
+        }
+    }
+}
