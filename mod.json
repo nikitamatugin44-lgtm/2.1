@@ -6,8 +6,8 @@
     "developer": "fullydraco",
     "description": "Adds a virtual x offset at level start so the X pos limit / Scroll Speed Bug shows up earlier, to roughly emulate 2.1-style high-TPS behavior.",
     "gd": {
-        "android": "2.2074",
-        "win": "2.2074"
+        "android": "2.2081",
+        "win": "2.2081"
     },
     "settings": {
         "enable-bias": {
